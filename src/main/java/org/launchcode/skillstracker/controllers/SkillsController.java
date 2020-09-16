@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 public class SkillsController {
 
-    @RequestMapping(value = "programmingLanguages", method = {RequestMethod.GET, RequestMethod.POST})
+    @PostMapping("form")
     @ResponseBody
     public String programmingLanguages(@RequestParam String coder, @RequestParam  String choice1, @RequestParam String choice2, @RequestParam String choice3) {
         return "<html>" +
@@ -19,13 +19,14 @@ public class SkillsController {
                 "</body>"+
                 "</html>";
     }
-@GetMapping(value = "form")
+
+@GetMapping("form")
 @ResponseBody
     public String programmingLanguagesForm() {
         String html =
         "<html>" +
                     " <body> " +
-                "<form method = 'post' action = '/form' choice1 = 'choice1'>"+
+                "<form method = 'post' action = '/form'>"+
                     "<h2>Name:</h2>"+
                          "<input type = 'text' name = 'coder'/> " +
                 "<h2>My favorite language:</h2>"+

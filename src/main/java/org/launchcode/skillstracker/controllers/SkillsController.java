@@ -20,8 +20,8 @@ public class SkillsController {
                 "</html>";
     }
 
-@GetMapping("form")
-@ResponseBody
+    @GetMapping("form")
+    @ResponseBody
     public String programmingLanguagesForm() {
         String html =
         "<html>" +

@@ -8,16 +8,13 @@ public class SkillsController {
     @RequestMapping(value = "programmingLanguages", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public String programmingLanguages(@RequestParam String coder, @RequestParam  String choice1, @RequestParam String choice2, @RequestParam String choice3) {
-
-
         return "<html>" +
                 "<body>"+
-                "<h1>Skills Tracker</h1> " +
-                "<h2>Skills List</h2> " +
+                "<h1>"+coder+"</h1> " +
                 "<ol>" +
                 "<li name = 'choice1'>"+choice1+"</li>" +
-                "<li name = 'choice2'>\"+choice2+\"</li>" +
-                "<li name = 'choice3'>\"+choice3+\"</li>" +
+                "<li name = 'choice2'>"+choice2+"</li>" +
+                "<li name = 'choice3'>"+choice3+"</li>" +
                 "</ol>"+
                 "</body>"+
                 "</html>";
